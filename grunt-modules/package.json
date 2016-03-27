@@ -1,7 +1,7 @@
 {
   "name": "grunt-starlight-hello-world",
   "version": "1.0.0",
-  "description": "A simple working example of using `grunt-starlight`.",
+  "description": "A working example of using modules in `grunt-starlight`.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paulcuth/starlight-examples.git"
