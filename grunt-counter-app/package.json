@@ -1,0 +1,27 @@
+{
+  "name": "grunt-starlight-counter-app",
+  "version": "1.0.0",
+  "description": "A simple working example of using `grunt-starlight`.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulcuth/starlight-examples.git"
+  },
+  "keywords": [
+    "Lua",
+    "JavaScript",
+    "Grunt",
+    "examples"
+  ],
+  "author": "Paul Cuthbertson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulcuth/starlight-examples/issues"
+  },
+  "homepage": "https://github.com/paulcuth/starlight-examples#readme",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-destructuring": "^6.6.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^1.1.0",
+    "grunt-starlight": "^0.1.7"
+  }
+}
