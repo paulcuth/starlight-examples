@@ -3,11 +3,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     starlight: {
       example: {
-        src: 'src/*.lua',
-        dest: 'dist/app.lua.es6.js',
+        src: 'src/script/*.lua',
+        dest: 'dist/script/app.lua.js',
         options: {
           main: 'app.lua',
-          basePath: 'src',
+          basePath: 'src/script',
           sourceMap: true,
         }
       }
@@ -16,25 +16,36 @@ module.exports = function(grunt) {
     babel: {
       example: {
         options: {
+          presets: ['es2015'],
           sourceMap: true,
           // `inputSourceMap` is loaded at run-time; see `babel-runner` below.
         },
-        src: 'dist/app.lua.es6.js',
-        dest: 'dist/app.lua.js',
+        src: 'dist/script/app.lua.js',
+        dest: 'dist/script/app.lua.js',
+      }
+    },
+
+    copy: {
+      example: {
+        expand: true,
+        cwd: 'src',
+        src: ['index.html', 'style/main.css'],
+        dest: 'dist/',
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-starlight');
   grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.registerTask('babel-runner', function () {
-    const inputSourceMap = grunt.file.readJSON('dist/app.lua.es6.js.map');
+    const inputSourceMap = grunt.file.readJSON('dist/script/app.lua.js.map');
     grunt.config.set('babel.example.options.inputSourceMap', inputSourceMap);
     grunt.task.run('babel:example');
 	});
 
   // Default task.
-  grunt.registerTask('default', ['starlight:example', 'babel-runner']);
+  grunt.registerTask('default', ['starlight:example', 'babel-runner', 'copy:example']);
 
 };

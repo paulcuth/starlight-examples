@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <section id="canvas"></section>
+    <article>
+      <h1>Source mapping with Starlight</h1>
+      <ol>
+        <li>Open your browser's console window and go to the Debugger/Sources tab.</li>
+        <li>Select the <code>script/app.lua</code> file from the list and you should see the Lua source code that is running.</li>
+        <li>Add a breakpoint to line 3.</li>
+        <li>Refresh the page.</li>
+      </ol>
+      <p>
+        Execution will stop at the breakpoint and you should be able to step through the source from there.
+        You can blackbox the Starlight runtime code so that you only see the Lua source being executed.
+      </p>
+    </article>
+
+    <script src="http://paulcuth.me.uk/starlight/browser-lib/starlight.js"></script>
+    <script src="./script/app.lua.js"></script>
+  </body>
+</html>
