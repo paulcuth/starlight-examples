@@ -3,6 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./style/main.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Starlight :: Source map example</title>
   </head>
   <body>
     <section id="canvas"></section>
@@ -10,14 +13,20 @@
       <h1>Source mapping with Starlight</h1>
       <ol>
         <li>Open your browser's console window and go to the Debugger/Sources tab.</li>
-        <li>Select the <code>script/app.lua</code> file from the list and you should see the Lua source code that is running.</li>
-        <li>Add a breakpoint to line 3.</li>
-        <li>Refresh the page.</li>
+        <li>Select the <code>script/app.lua</code> file from the list and you should see the Lua source code of the page.</li>
+        <li>Add a breakpoint.</li>
+        <li>Refresh.</li>
+        <li>Try blackboxing the Starlight runtime code, so that you only see Lua.</li>
       </ol>
       <p>
-        Execution will stop at the breakpoint and you should be able to step through the source from there.
-        You can blackbox the Starlight runtime code so that you only see the Lua source being executed.
+        This is the first iteration and it's far from perfect. Each browser has its own odd behaviours that I'll document soon. 
+        Any help on on ironing out these quirks would be much appreciated.
+      <p>
+      </p> 
+        Unfortunately, due to the way that scoping is represented, it hasn't been possible to display variables in the debugger, which is sad. 
+        However, you can step through Lua source across files and see Lua in error stack traces. Woop.
       </p>
+      <p>This is an example of using <a href="http://starlight.paulcuth.me.uk/">Starlight</a> Lua to ES6 compiler. View <a href="https://github.com/paulcuth/starlight-examples/tree/master/source-map/src">page source</a>. <a href="https://twitter.com/lua_starlight">@lua_starlight</a> on Twitter.</p>
     </article>
 
     <script src="http://paulcuth.me.uk/starlight/browser-lib/starlight.js"></script>

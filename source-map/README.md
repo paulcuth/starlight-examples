@@ -1,14 +1,14 @@
 # source-map
 
-** NOTE: Source mapping is currently in beta only **
+**NOTE: Source mapping is currently in [beta release](https://github.com/paulcuth/starlight-examples/blob/master/source-map/package.json#L33) only**
 
-An example that uses `grunt-starlight` to precompile a Lua script into a JavaScript file and associated source map.
+An example that uses `grunt-starlight` to precompile a Lua script into a JavaScript file with associated source map.
 
 See this example online at: http://paulcuth.me.uk/starlight/source-map-example
 
-## Instructions.
+## Running locally
 
-Navigate to the `source-map` directory in a terminal, install dependencies and build. 
+Navigate to the `source-map` directory in a terminal, then install dependencies and build: 
 
 ```
 npm install

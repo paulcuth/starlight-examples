@@ -19,6 +19,10 @@ body {
   overflow: hidden;
 }
 
+a {
+  color: #fff;
+}
+
 #canvas {
   flex-grow: 1;
   position: relative;
